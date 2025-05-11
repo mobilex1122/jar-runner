@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 4.0c)
 
-set(EXEC_NAME MyApp)
+set(EXEC_NAME JavaRun)
 
 
 # Set the project name and version
