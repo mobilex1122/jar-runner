@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0c)
+cmake_minimum_required(VERSION 4.0)
 
 set(EXEC_NAME JavaRun)
 
