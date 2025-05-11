@@ -28,11 +28,17 @@ std::string getFileName(int argc, char* argv[])  {
 }
 
 bool isJavaInstalled() {
+    
+    #if PLATFORM_WINDOWS
+    const char* command = "java.exe --version";
+    #else
+    const char* command = "java --version";
+    #endif
     // Try to execute the command "java -version"
     // The output will be redirected to a temporary file
-    std::cout << "$ java -version" << std::endl;
+    std::cout << "$ " << command << std::endl;
 
-    int result = system("java -version");
+    int result = system(command);
     
     // Check the result of the command
     return (result == 0);
