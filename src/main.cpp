@@ -30,7 +30,7 @@ std::string getFileName(int argc, char* argv[])  {
 bool isJavaInstalled() {
     
     #if PLATFORM_WINDOWS
-    const char* command = "java.exe --version";
+    const char* command = "java.exe -version";
     #else
     const char* command = "java --version";
     #endif
