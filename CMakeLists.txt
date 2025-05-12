@@ -32,6 +32,9 @@ target_link_libraries(${EXEC_NAME} PRIVATE fltk::fltk)
 
 # Platform-specific settings
 if(WIN32)
+    set_target_properties(${EXEC_NAME} PROPERTIES
+        WIN32_EXECUTABLE TRUE
+    )
     message(STATUS "Configuring for Windows")
     # Windows-specific settings
     target_compile_definitions(${EXEC_NAME} PRIVATE PLATFORM_WINDOWS)
